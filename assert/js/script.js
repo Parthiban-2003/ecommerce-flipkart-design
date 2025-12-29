@@ -23,6 +23,26 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 1000); 
     });
   });
+
+  const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', function () {
+
+      const productName = button.getAttribute('data-product');
+
+      alert(`Added Successfully to cart!`);
+    });
+  });
+
+  const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+  wishlistButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const productName = button.getAttribute('data-product');
+      alert(`Added Successfully to wishlist!`);
+    });
+  });
   
 
  
